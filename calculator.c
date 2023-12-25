@@ -1,32 +1,46 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int number, number1, result;
-    char operation;  // Declare 'operation' before using it
+    char operation; // Declare 'operation' before using it
 
     char addition = '+';
     char subtraction = '-';
     char multiplication = '*';
+    char division = '/';
 
     printf("Enter the first number: ");
     scanf("%d", &number);
 
-    printf("Enter the operation (+, -, *): ");
-    scanf(" %c", &operation);  // Added a space before %c to consume any whitespace character
+    printf("Enter the operation (+, -, *,/): ");
+    scanf(" %c", &operation); // Added a space before %c to consume any whitespace character
 
     printf("Enter the second number: ");
     scanf("%d", &number1);
 
-    if (operation == addition) {
+    if (operation == addition)
+    {
         result = number + number1;
         printf("The sum is: %d\n", result);
-    } else if (operation == subtraction) {
+    }
+    else if (operation == subtraction)
+    {
         result = number - number1;
         printf("The result of subtraction is: %d\n", result);
-    } else if (operation == multiplication) {
+    }
+    else if (operation == multiplication)
+    {
         result = number * number1;
         printf("The product is: %d\n", result);
-    } else {
+    }
+    else if (operation == division)
+    {
+        result = number / number1;
+        printf("The product is: %d\n", result);
+    }
+    else
+    {
         printf("Invalid operation.\n");
     }
 
